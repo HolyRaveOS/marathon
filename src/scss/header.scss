@@ -218,7 +218,6 @@
 	}
 
 	&__btn-wrapper {
-		background-color: #fff;
 		padding: toRem(10);
 		text-align: center;
 		position: fixed;
@@ -226,18 +225,29 @@
 		right: 0;
 		left: 0;
 		z-index: 100;
-		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.5s;
 		outline: none;
+		opacity: 0;
+		background-color: #fff;
 
 		._header-scroll & {
-			opacity: 1;
 			pointer-events: initial;
+			opacity: 1;
 		}
 	}
 
 	&__btn {
 		@include adaptiveValue("font-size", 18, 14);
+
+		&--modified {
+			margin: 0 auto;
+			display: block;
+			margin-top: toRem(20);
+
+			@media (min-width:$tablet) {
+				display: none;
+			}
+		}
 	}
 }

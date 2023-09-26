@@ -187,6 +187,7 @@
 			width: toRem(55);
 			background-repeat: no-repeat;
 			top: toRem(-25);
+			background-size: contain;
 		}
 
 		&::before {
@@ -359,6 +360,10 @@
 		align-items: center;
 	}
 
+	&__title {
+		@include adaptiveValue("margin-bottom", 30, 20);
+	}
+
 	&__text-item {
 		color: var(--black-color);
 		max-width: toRem(700);
@@ -389,8 +394,12 @@
 	}
 
 	&__image {
+		max-width: toRem(220);
+		width: 100%;
+		display: block;
+
 		@media (min-width:$pc) {
-			padding-right: toRem(70);
+			margin-right: toRem(79);
 		}
 
 		@media (max-width:$mobile) {
@@ -659,6 +668,9 @@
 	}
 
 	&__image {
+		max-width: toRem(320);
+		width: 100%;
+
 		@media (max-width: em(650)) {
 			display: none;
 		}
@@ -681,11 +693,11 @@
 		@media (max-width:$mobileSmall) {
 			justify-content: center;
 		}
-	}
 
-	&__chance-title {
-		padding-left: 0;
-		margin-bottom: toRem(5);
+		.title {
+			padding-left: 0;
+			margin-bottom: toRem(5);
+		}
 	}
 
 	&__chance-subtitle {
