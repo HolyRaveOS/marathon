@@ -201,9 +201,11 @@
 		transition: transform 0.5s;
 	}
 
-	&:hover {
-		&::after {
-			transform: scale(1);
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				transform: scale(1);
+			}
 		}
 	}
 }

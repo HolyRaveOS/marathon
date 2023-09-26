@@ -444,6 +444,12 @@
 				}
 			}
 
+			@media (max-width:$mobileSmall) {
+				a {
+					display: block;
+				}
+			}
+
 			.program__list-text {
 				max-width: toRem(400);
 				width: 100%;
@@ -662,6 +668,7 @@
 		@include adaptiveValue("padding-bottom", calc($p-big / 2), calc($p-small / 2));
 		@include adaptiveValue("padding-top", calc($p-big / 2), calc($p-small / 2));
 		display: flex;
+		flex-wrap: wrap;
 		align-items: end;
 		justify-content: space-between;
 		gap: toRem(20);
@@ -669,6 +676,10 @@
 		@media (min-width:$tablet) {
 			padding-left: toRem(100);
 			padding-right: toRem(100);
+		}
+
+		@media (max-width:$mobileSmall) {
+			justify-content: center;
 		}
 	}
 
@@ -681,6 +692,10 @@
 		color: var(--black-color);
 		@include adaptiveValue("font-size", 24, 18);
 		text-transform: uppercase;
+
+		@media (max-width:$mobileSmall) {
+			text-align: center;
+		}
 
 		span {
 			color: var(--red-color);

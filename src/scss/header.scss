@@ -194,6 +194,7 @@
 
 		@media (max-width:$tablet) {
 			height: fit-content;
+			transform: translateX(toRem(5));
 
 			img {
 				object-fit: contain;
@@ -234,5 +235,9 @@
 			opacity: 1;
 			pointer-events: initial;
 		}
+	}
+
+	&__btn {
+		@include adaptiveValue("font-size", 18, 14);
 	}
 }
