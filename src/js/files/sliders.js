@@ -28,18 +28,18 @@ import '../../scss/base/swiper.scss'
 function initSliders() {
   // Список слайдерів
   // Перевіряємо, чи є слайдер на сторінці
-  if (document.querySelector('.swiper')) {
+  if (document.querySelector('.works__slider')) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
-    new Swiper('.swiper', {
+    new Swiper('.works__slider', {
       // Вказуємо склас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
       modules: [Navigation],
       observer: true,
       observeParents: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
       //autoHeight: true,
       speed: 800,
 
@@ -76,8 +76,8 @@ function initSliders() {
 
       // Кнопки "вліво/вправо"
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+        prevEl: '.works__button-prev',
+        nextEl: '.works__button-next',
       },
       /*
 			// Брейкпоінти

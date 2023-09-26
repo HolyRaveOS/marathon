@@ -1,5 +1,4 @@
 //=============================================================
-
 .header {
 	padding-top: toRem(20);
 	@include adaptiveValue("padding-bottom", 50, 30);
@@ -198,6 +197,7 @@
 
 			img {
 				object-fit: contain;
+				border-radius: 315px 315px 100px 103px;
 			}
 		}
 
@@ -228,10 +228,11 @@
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.5s;
+		outline: none;
 
-		// ._header-scroll & {
-		// 	opacity: 1;
-		// 	pointer-events: initial;
-		// }
+		._header-scroll & {
+			opacity: 1;
+			pointer-events: initial;
+		}
 	}
 }

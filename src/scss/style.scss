@@ -43,6 +43,12 @@
 }
 
 //=========================================================================
+// section paddings
+
+$p-big: 130;
+$p-small: 50;
+
+//=========================================================================
 
 // Adaptive grid settings
 
@@ -126,6 +132,10 @@ Snippet (HTML): cnt
 	@if ($maxWidthContainer>0) {
 		max-width: toRem($containerWidth);
 		margin: 0 auto;
+
+		@media (max-width:$mobileSmall) {
+			padding: 0 toRem(10);
+		}
 	}
 
 	@if ($containerPadding>0) {

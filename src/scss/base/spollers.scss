@@ -4,6 +4,7 @@
 // Блок зі спойлерами
 .spollers {
 	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 15px;
 }
 
@@ -14,11 +15,8 @@
 
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
 	border-radius: toRem(5);
 	position: relative;
 	list-style: none;
